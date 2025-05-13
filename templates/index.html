@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>แดชบอร์ดไฟป่าภาคเหนือ</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <!-- DataTables CSS -->
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"/>
+  <!-- สไตล์ของเรา -->
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<header>แดชบอร์ดสถานการณ์ไฟป่าภาคเหนือ</header>
+
+<main class="dashboard">
+  <div class="cards" id="info-cards"></div>
+
+  <div class="card chart-card">
+    <h2>แนวโน้มค่า PM2.5</h2>
+    <canvas id="pmChart"></canvas>
+  </div>
+
+  <div class="card table-card">
+    <h2>รายละเอียดตามจังหวัด</h2>
+    <table id="dataTable" class="display"></table>
+  </div>
+
+  <div class="card map-card">
+    <h2>แผนที่พื้นที่เสี่ยง</h2>
+    <div id="map"></div>
+  </div>
+</main>
+
+<footer>© 2025 ตัวอย่างโปรเจ็ค โดยคุณ</footer>
+
+<!-- สคริปต์ JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="/static/js/app.js"></script>
+</body>
+</html>
