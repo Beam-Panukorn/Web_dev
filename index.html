@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wildfire Monitoring Dashboard</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>🔥 Wildfire Monitoring Dashboard - Northern Thailand</header>
+  <div class="tabs">
+    <button class="tab active" data-tab="red">Red Zone</button>
+    <button class="tab" data-tab="green">Green Zone</button>
+  </div>
+
+  <div id="red" class="tab-content active">
+    <h2>Red Zone 🔴</h2>
+    <div class="grid">
+      <div class="card"><canvas id="tempChartRed"></canvas></div>
+      <div class="card"><canvas id="windChartRed"></canvas></div>
+      <div class="card"><div id="redMap"></div></div>
+      <div class="card"><h3>🌡️Temperature Today °C <br />
+         <br />
+       Mae Hong Son: 35°C<br />
+         <br />
+      Chiang Mai: 38°C<br />
+         <br />
+      Lampang: 37°C
+      </h3></div>
+      <div class="card"><h3>🌬️Wind Speed Today km/h<br />
+        <br />
+      Mae Hong Son: 10km/h<br />
+        <br />
+     Chiang Mai: 15km/h<br />
+        <br />
+     Lampang: 12km/h
+      </h3></div>
+      <div class="card"><h3>💧Humidity Today %<br />
+        <br />
+      Mae Hong Son: Moderate risk<br />
+        <br />
+     Chiang Mai: Very high risk<br />
+        <br />
+     Lampang: High risk
+      </h3></div>
+    </div>
+  </div>
+
+  <div id="green" class="tab-content">
+    <h2>Green Zone 🌿</h2>
+    <div id="greenAlert" class="alert" style="display:none;"></div>
+    <button id="greenAlertBtn">Toggle Alert</button>
+    <div class="grid">
+      <div class="card"><canvas id="humidityChartGreen"></canvas></div>
+      <div class="card"><canvas id="rainfallChartGreen"></canvas></div>
+      <div class="card"><div id="greenMap"></div></div>
+      <div class="card"><h3>Humidity Today: 35%</h3></div>
+      <div class="card"><h3>Rainfall Today: 4 mm</h3></div>
+      <div class="card"><h3>Fire Risk: Level D</h3></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
