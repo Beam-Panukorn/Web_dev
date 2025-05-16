@@ -1,0 +1,160 @@
+/* style.css */
+
+/* Reset & base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #121212;
+  color: #eee;
+  line-height: 1.5;
+  min-height: 100vh;
+  padding: 1rem 2rem;
+}
+
+/* Header */
+header {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #ff6b35;
+  text-align: center;
+  text-shadow: 0 0 10px #ff6b35;
+}
+
+/* Tabs container */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+/* Tab buttons */
+.tab {
+  background: #222;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #aaa;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+}
+
+.tab:hover {
+  color: #ff6b35;
+  border-color: #ff6b35;
+  background: #2c2c2c;
+}
+
+.tab.active {
+  color: #fff;
+  background: #ff6b35;
+  border-color: #ff6b35;
+  box-shadow: 0 0 15px #ff6b35;
+}
+
+/* Tab content */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Grid layout for cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+/* Cards */
+.card {
+  background-color: #1e1e1e;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+  transition: background-color 0.3s ease;
+  min-height: 180px;
+}
+
+/* Card hover effect */
+.card:hover {
+  background-color: #292929;
+}
+
+/* Map containers */
+#redMap, #greenMap {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+/* Alert box */
+.alert {
+  background-color: #2a4d14;
+  border: 1.5px solid #97c24f;
+  border-radius: 8px;
+  color: #d4f26f;
+  padding: 1rem 1.25rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  box-shadow: 0 0 10px #97c24f;
+}
+
+/* Alert button */
+#greenAlertBtn {
+  background-color: #97c24f;
+  border: none;
+  border-radius: 25px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  color: #1e1e1e;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #7bb32e;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: max-content;
+}
+
+#greenAlertBtn:hover {
+  background-color: #7bb32e;
+  box-shadow: 0 6px 18px #6b9f22;
+}
+
+/* Headings inside cards */
+.card h3 {
+  color: #ddd;
+  font-weight: 600;
+  font-size: 1.1rem;
+  line-height: 1.4;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+  .tabs {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
